@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Word
 {
+    //Main script
     public string word;
     private int indexOfChar;
 
