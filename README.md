@@ -16,7 +16,7 @@ Main idea of this project is to increase printing skills in a more fun way, than
 
 To create this game I used Unity and C#;
 
-# Main Features
+# Main Features;
 
 Increasing difficulty;
 
