@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Score : MonoBehaviour
 {
-    public float points;
-    public float timer = 0f;
-    int length;
-    public Text score;
-    public Transform wordCanvas;
+    public float points;//ur points
+    public float timer = 0f;//time from start printing
+    int length;//length of current word
+    public MyIntEvent observer;//my observer
 
-    private void Start()
+    private void Awake()
     {
         PlayerPrefs.SetFloat("points", points);
+
+        if (observer == null)
+            observer = new MyIntEvent();
     }
 
     public void SetStartTime()
@@ -36,6 +39,9 @@ public class Score : MonoBehaviour
     public void increasePoints ()
     {
         points += Mathf.Round(length / GetTime());
+
+        observer.Invoke((int)points);
+
         PlayerPrefs.SetFloat("points", points);
     }
 }

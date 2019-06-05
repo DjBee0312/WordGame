@@ -7,8 +7,14 @@ public class ScoreDisplay : MonoBehaviour
 {
     public Text score;
 
-    void Update()
+    private void Start()
     {
-        score.text = "Score:" + FindObjectOfType<Score>().points.ToString();
+        MyIntEvent observer = FindObjectOfType<Score>().observer;
+        observer.AddListener(SetScore);
+    }
+
+    void SetScore(int points)
+    {
+        score.text = "Score:" + points;
     }
 }

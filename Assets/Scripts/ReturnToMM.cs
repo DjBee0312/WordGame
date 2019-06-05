@@ -8,7 +8,7 @@ public class ReturnToMM : MonoBehaviour
 {
     public Button Return;
 
-    private void Update()
+    private void Start()
     {
         Return.onClick.AddListener(delegate { returnToMM(); });
     }

@@ -8,7 +8,7 @@ public class ShowRecords : MonoBehaviour
 {
     public Button records;
 
-    private void Update()
+    private void Start()
     {
         records.onClick.AddListener(delegate { ShowRecord(); });
     }
