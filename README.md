@@ -31,21 +31,23 @@ public int GetMark(person TimurGafarovich)
 
 {
 
+  int Mark;
+
   //In this code I used
   
-  pattern observer;
+  Mark += pattern observer;
   
-  writing in files;
+  Mark += writing in files;
   
-  reading from files;
+  Mark += reading from files;
   
-  generics;
+  Mark += generics;
   
-  sorting methods;
+  Mark += sorting methods;
   
-  some async stuff;//maybe IDK really
+  Mark += some async stuff; //maybe IDK really
   
-  return int Mark;
+  return Mark;
   
 }
 ```
