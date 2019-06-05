@@ -26,6 +26,7 @@ Lives;
 
 # Some text for T.Shemsedinov;
 
+```c#
 public int GetMark(person TimurGafarovich) 
 
 {
@@ -47,5 +48,5 @@ public int GetMark(person TimurGafarovich)
   return int Mark;
   
 }
-
+```
 
