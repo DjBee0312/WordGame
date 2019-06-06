@@ -45,7 +45,7 @@ public int GetMark(person TimurGafarovich)
   
   Mark += sorting methods;
   
-  Mark += some async stuff; //maybe IDK really
+  //Mark += some async stuff;(If be honest - there is noo async)
   
   return Mark;
   
