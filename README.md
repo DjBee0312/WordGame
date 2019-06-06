@@ -12,6 +12,8 @@ Here's some gameplay:
 
 Main idea of this project is to increase printing skills in a more fun way, than just boring typing;
 
+I was inspired by NeProgrimist, because he trains his typing skills almost every day;
+
 # Engine;
 
 To create this game I used Unity and C#;
