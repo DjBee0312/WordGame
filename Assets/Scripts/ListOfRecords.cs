@@ -26,17 +26,10 @@ public class ListOfRecords : MonoBehaviour
 
         for (int i = 0; i < arr.Length; i++)
         {
-            //print(i + " i");
-            //print(points.Length + " points.Length");
-            //print(names.Length + " names.Length");
             string name = arr[i].Remove(0, arr[i].IndexOf("|")+1);
             string score = arr[i].Remove(arr[i].IndexOf("|"));
-            //print(arr[i] + " arr[i]");
             names[i] = name;
-            //print(name + " name");
-            //print(names[i] + " names[i]");
             points[i] = Convert.ToInt32(score);
-            //print(score);
         }
 
         //Kind of bubble sort
