@@ -13,8 +13,6 @@ public class Score : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.SetFloat("points", points);
-
         if (observer == null)
             observer = new MyIntEvent();
     }

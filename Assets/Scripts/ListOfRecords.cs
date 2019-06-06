@@ -21,16 +21,20 @@ public class ListOfRecords : MonoBehaviour
     string CalculateRecords (string[] arr)
     {
         string result = "";
-        int[] points = new int[arr.Length];
-        string[] names = new string[arr.Length];
+        int[] points = new int[arr.Length-1];
+        string[] names = new string[arr.Length-1];
 
         for (int i = 0; i < arr.Length; i++)
         {
+            //print(i + " i");
+            //print(points.Length + " points.Length");
+            //print(names.Length + " names.Length");
             string name = arr[i].Remove(0, arr[i].IndexOf("|")+1);
             string score = arr[i].Remove(arr[i].IndexOf("|"));
-            //print(arr[i]);
+            //print(arr[i] + " arr[i]");
             names[i] = name;
-            //print(name);
+            //print(name + " name");
+            //print(names[i] + " names[i]");
             points[i] = Convert.ToInt32(score);
             //print(score);
         }
@@ -38,9 +42,13 @@ public class ListOfRecords : MonoBehaviour
         //Kind of bubble sort
         for(int i = 0; i < arr.Length; i++)
         {
+            print(i);
+            print("first");
             for (int j = 0; j < arr.Length - 1; j++)
             {
-                if( points[j+1] < points[j])
+                print(j);
+                print("second");
+                if ( points[j+1] < points[j])
                 {
                     int p = points[j];
                     string n = names[j];
