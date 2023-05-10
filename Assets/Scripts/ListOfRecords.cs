@@ -13,8 +13,8 @@ public class ListOfRecords : MonoBehaviour
     [SerializeField]
     Text records;
 
-    void Start()
-    {
+    void Start() {
+        recordsList = list.Split(' ');
         records.text = CalculateRecords(recordsList);
     }
 
@@ -24,39 +24,43 @@ public class ListOfRecords : MonoBehaviour
         int[] points = new int[arr.Length-1];
         string[] names = new string[arr.Length-1];
 
-        for (int i = 0; i < arr.Length; i++)
+        for (int i = 0; i < arr.Length-1; i++)
         {
             string name = arr[i].Remove(0, arr[i].IndexOf("|")+1);
             string score = arr[i].Remove(arr[i].IndexOf("|"));
             names[i] = name;
             points[i] = Convert.ToInt32(score);
         }
+        Debug.Log(arr[arr.Length-2]);
 
-        //Kind of bubble sort
-        for(int i = 0; i < arr.Length; i++)
-        {
-            print(i);
-            print("first");
-            for (int j = 0; j < arr.Length - 1; j++)
-            {
-                print(j);
-                print("second");
-                if ( points[j+1] < points[j])
-                {
-                    int p = points[j];
-                    string n = names[j];
-                    points[j] = points[j + 1];
-                    names[j] = names[j = 1];
-                    points[j + 1] = p;
-                    names[j + 1] = n;
-                }
-            }
-        }
+        // //Kind of bubble sort
+        // for(int i = 0; i < arr.Length; i++)
+        // {
+        //     print(i);
+        //     print("first");
+        //     for (int j = 0; j < arr.Length - 1; j++)
+        //     {
+        //         print(j);
+        //         print("second");
+        //         if ( points[j+1] < points[j])
+        //         {
+        //             int p = points[j];
+        //             string n = names[j];
+        //             points[j] = points[j + 1];
+        //             names[j] = names[j = 1];
+        //             points[j + 1] = p;
+        //             names[j + 1] = n;
+        //         }
+        //     }
+        // }
+        //
 
+        Array.Sort(names);
         Array.Reverse(names);
+        Array.Sort(points);
         Array.Reverse(points);
 
-        for (int i = 0; i < arr.Length && i < 10; i++)
+        for (int i = 0; i < arr.Length-1 && i < 10; i++)
         {
             result += i+1 + "." + names[i] + "  -  " + points[i] + "\n";
             print(result);

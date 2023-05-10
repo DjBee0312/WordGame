@@ -259,3 +259,50 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+_Builds/
+/[Ll]ibrary/
+/[Ll]ogs/
+sysinfo.txt
+*.stackdump
+
+# ============================================= #
+# Visual Studio / MonoDevelop / Rider generated #
+# ============================================= #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+/.idea*/
+.vscode/
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+/Builds/
+/Recordings/
+UserSettings/Layouts/default-2021.dwlt
+UserSettings/EditorUserSettings.asset
+ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+/[Uu]serSettings/
+/[Uu]ser[Ss]ettings/
+/UserSettings
